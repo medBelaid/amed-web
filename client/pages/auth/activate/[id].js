@@ -55,7 +55,7 @@ const ActivateAccount = ({ router }) => {
                 <h2>Bonjour {name}, Ready to activate your account?</h2>
                 <br />
                 {success && showSuccessMessage(success)}
-                {error && showSuccessMessage(error)}
+                {error && showErrorMessage(error)}
                 <button
                     className="btn btn-outline-warning btn-block"
                     onClick={clickSubmit}
