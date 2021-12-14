@@ -3,6 +3,17 @@ import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import Layout from '../components/Layout'
 
+const gift = () => {
+  let result = [{
+    firstName: "ds",
+    lastName: "Tahri"
+  }, {
+    firstName: "ds",
+    lastName: "Belaid"
+  }]
+  return result.sort((a, b) => a.lastName.localeCompare(b.lastName))
+}
+
 export default function Home() {
   return (
     <Layout>
@@ -13,7 +24,7 @@ export default function Home() {
       </Head>
       <main>
         <h1 className={styles.title}>
-          Welcome <a href="https://nextjs.org">Next.js!</a>
+          {JSON.stringify(gift())}
         </h1>
 
         <p className={styles.description}>
